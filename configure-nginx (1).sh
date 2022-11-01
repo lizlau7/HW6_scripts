@@ -14,7 +14,7 @@ sudo systemctl stop nginx
 #delete the existing default web config file
 sudo rm -rf /etc/nginx/sites-available/default
 #copy down the new config file from github and pipe it to 'default'
-sudo curl https://raw.githubusercontent.com/mikecolbert/AzureVM/main/default | sudo tee -a /etc/nginx/sites-available/default
+sudo curl https://raw.githubusercontent.com/lizlau7/AzureVM/main/default | sudo tee -a /etc/nginx/sites-available/default
 
 # remove any existing files or folders in the root directory 
 sudo rm -rf /var/www/html/
@@ -27,7 +27,7 @@ sudo rm -rf /var/www/HW6_website
 cd /var/www/
 
 # clone the repository - it is now in /var/www/HW6_website
-sudo git clone https://github.com/mikecolbert/HW6_website.git
+sudo git clone https://github.com/lizlau7/HW6_website.git
 
 # copy recursively all files and folders into the root html directory for Nginx
 sudo cp -r /var/www/HW6_website/ /var/www/html
